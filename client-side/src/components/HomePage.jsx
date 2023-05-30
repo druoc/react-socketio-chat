@@ -16,7 +16,6 @@ const HomePage = () => {
       <h3 className="home-header">
         Please choose a username to access the chat
       </h3>
-      <label htmlFor="username">Username: </label>
       <input
         type="text"
         minLength={4}
