@@ -15,7 +15,7 @@ const socketIO = require("socket.io")(http, {
 socketIO.on("connection", (socket) => {
   console.log(`${socket.id} user is online!`);
   socket.on("disconnect", () => {
-    console.log("Someone just disconnected...oh dear");
+    console.log(`${socket.id} just disconnected...oh dear`);
   });
 });
 

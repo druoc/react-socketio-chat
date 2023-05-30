@@ -19,7 +19,7 @@ const HomePage = () => {
       <input
         type="text"
         minLength={4}
-        maxLength={12}
+        maxLength={15}
         name="username"
         id="username"
         className="username-input"
