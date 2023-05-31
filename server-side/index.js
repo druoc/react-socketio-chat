@@ -4,6 +4,8 @@ const PORT = 4000;
 const http = require("http").Server(app);
 const cors = require("cors");
 
+let userArray = [];
+
 app.use(cors());
 
 const socketIO = require("socket.io")(http, {
@@ -19,8 +21,16 @@ socketIO.on("connection", (socket) => {
     socketIO.emit("messageResponse", data);
   });
 
+  socket.on("newUser", (data) => {
+    userArray.push(data);
+    socketIO.emit("newUserResponse", userArray);
+  });
+
   socket.on("disconnect", () => {
     console.log(`${socket.id} just disconnected...oh dear`);
+    userArray = userArray.filter((user) => user.socketID !== socket.id);
+    socketIO.emit("newUserResponse", userArray);
+    socket.disconnect();
   });
 });
 
