@@ -16,6 +16,7 @@ const HomePage = () => {
       <h3 className="home-header">
         Please choose a username to access the chat
       </h3>
+      <h4 className="sub-header">Also, please be nice to each other!</h4>
       <input
         type="text"
         minLength={4}
