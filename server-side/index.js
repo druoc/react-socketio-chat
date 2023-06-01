@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const PORT = 4000;
+const PORT = process.env.PORT || 4000; // Use process.env.PORT for dynamic port allocation
 const http = require("http").Server(app);
 const cors = require("cors");
 
@@ -10,7 +10,7 @@ app.use(cors());
 
 const socketIO = require("socket.io")(http, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: "http://localhost:3000", // Replace with your app's domain
   },
 });
 
@@ -30,7 +30,7 @@ socketIO.on("connection", (socket) => {
     console.log(`${socket.id} just disconnected...oh dear`);
     userArray = userArray.filter((user) => user.socketID !== socket.id);
     socketIO.emit("newUserResponse", userArray);
-    socket.disconnect();
+    // socket.disconnect(); // No need to manually disconnect the socket
   });
 });
 
