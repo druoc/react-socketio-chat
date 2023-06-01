@@ -38,11 +38,6 @@ const ChatMain = ({ messages }) => {
             </div>
           )
         )}
-
-        {/*user is typing prompt*/}
-        <div className="message-status">
-          <p>Someone is typing a message...</p>
-        </div>
       </div>
     </>
   );
