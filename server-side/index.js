@@ -10,7 +10,7 @@ app.use(cors());
 
 const socketIO = require("socket.io")(http, {
   cors: {
-    origin: "https://socketiochatfe.onrender.com", // Replace with your app's domain
+    origin: "https://socketiochatfe.onrender.com",
   },
 });
 
