@@ -10,7 +10,7 @@ app.use(cors());
 
 const socketIO = require("socket.io")(http, {
   cors: {
-    origin: "https://www.dave-dev.co.uk/chat-app", // Replace with your app's domain
+    origin: "https://sprightly-sfogliatella-92ec84.netlify.app", // Replace with your app's domain
   },
 });
 
