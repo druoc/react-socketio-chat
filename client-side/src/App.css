@@ -7,6 +7,59 @@
   font-family: "Maven Pro", sans-serif;
 }
 
+/* ... Previous CSS code ... */
+
+/* Media Queries for Responsive Design */
+
+/* ... Previous CSS code ... */
+
+/* Media Queries for Responsive Design */
+
+@media screen and (max-width: 768px) {
+  /* Adjust styles for screens smaller than 768px */
+  .username-input {
+    width: 90%;
+    max-width: 100%;
+  }
+
+  .sign-in-button {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .chat-sidebar {
+    flex: 0.2;
+    max-width: 110px;
+  }
+
+  .chat-footer {
+    flex: 0.2;
+    max-width: 80%;
+  }
+
+  .chat-main {
+    flex: 0.8;
+    max-width: 100%;
+  }
+
+  .message {
+    width: 70%; /* Adjust message input width for small screens */
+    max-width: 70%;
+
+  }
+
+  .send-btn {
+    width: 18%;
+
+    margin-left: 5px; /* Add a small margin to separate it from the message input */
+  }
+}
+
+/* ... Rest of the CSS ... */
+
+
+
+
 .home {
   width: 100%;
   height: 100vh;
@@ -55,7 +108,7 @@
 .chat-sidebar {
   background-color: #d5eddb;
   height: 100vh;
-  padding: 15px;
+  padding-right: 20px;
   flex: 0.12;
   border-right: 2px solid grey;
 }
@@ -108,7 +161,7 @@
   background-color: #b0f5b8;
   position: fixed;
   bottom: 0;
-  width: 70%;
+  width: 88%;
 }
 
 .form {
@@ -128,7 +181,7 @@
 }
 
 .send-btn {
-  width: 170px;
+  width: 120px;
   padding: 10px;
   cursor: pointer;
   color: #fff;
@@ -166,3 +219,4 @@ send-btn:hover {
   font-style: italic;
   color: grey;
 }
+
